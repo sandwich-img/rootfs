@@ -11,7 +11,7 @@ case $ARCH in
 	arm* | aarch64) mkdir -p mnt/rootfs/usr/bin && cp /usr/bin/qemu* mnt/rootfs/usr/bin/ ;;
 esac
 
-pacstrap mnt/rootfs base &&
+pacstrap mnt/rootfs base base-devel &&
 
 case $ARCH in
         arm* | aarch64) rm -rf mnt/rootfs/usr/bin/qemu* ;;
