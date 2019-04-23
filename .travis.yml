@@ -11,13 +11,11 @@ env:
         - DISTRO=alpine   BRANCH=v3.9      ARCH=x86
         - DISTRO=alpine   BRANCH=v3.9      ARCH=x86_64
         - DISTRO=alpine   BRANCH=v3.9      ARCH=armhf
-        - DISTRO=alpine   BRANCH=v3.9      ARCH=armv7
         - DISTRO=alpine   BRANCH=v3.9      ARCH=aarch64
 
         - DISTRO=alpine   BRANCH=edge      ARCH=x86
         - DISTRO=alpine   BRANCH=edge      ARCH=x86_64
         - DISTRO=alpine   BRANCH=edge      ARCH=armhf
-        - DISTRO=alpine   BRANCH=edge      ARCH=armv7
         - DISTRO=alpine   BRANCH=edge      ARCH=aarch64
 
         - DISTRO=debian   BRANCH=stretch   ARCH=i386
@@ -43,4 +41,4 @@ before_script:
 script:
     - sudo ./update.sh -d "$DISTRO" -b "$BRANCH" -a "$ARCH"
 after_success:
-    - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push sandwichimg/alpine && docker push sandwichimg/debian && docker push sandwichimg/deepin && docker push sandwichimg:ubuntu ; fi
+    - if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push sandwichimg/$DISTRO ; fi
