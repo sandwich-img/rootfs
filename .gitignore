@@ -1,0 +1,3 @@
+x86_64_qemu*.tar.xz
+tmp
+alpine_chroot
