@@ -32,7 +32,7 @@ env:
         - DISTRO=ubuntu   BRANCH=bionic    ARCH=amd64
         - DISTRO=ubuntu   BRANCH=bionic    ARCH=armhf
         - DISTRO=ubuntu   BRANCH=bionic    ARCH=arm64
-		
+
         - DISTRO=ubuntu   BRANCH=disco     ARCH=i386
         - DISTRO=ubuntu   BRANCH=disco     ARCH=amd64
         - DISTRO=ubuntu   BRANCH=disco     ARCH=armhf
