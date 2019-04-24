@@ -4,7 +4,7 @@ set -xe
 
 case $ARCH in
 	armv7h | aarch64) BASE_IMG=yangxuan8282/archlinuxarm:$ARCH;;
-	x86_64) BASE_IMG=base/archlinux;;
+	x86_64) BASE_IMG=archlinux/base;;
 esac
 
 mkdir -p $ARCH
