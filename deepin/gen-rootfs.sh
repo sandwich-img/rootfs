@@ -5,9 +5,9 @@ set -xe
 DEBIAN_BRANCH=$BRANCH
 DEBIAN_ARCH=$ARCH
 DEEPIN_MIRROR="http://packages.deepin.com/deepin/"
-if [ ! -f /usr/share/debootstrap/scripts/panda ]; then
+if [ ! -f /usr/share/debootstrap/scripts/$DEBIAN_BRANCH ]; then
 
-        cat > /usr/share/debootstrap/scripts/panda <<'EOF'
+        cat > /usr/share/debootstrap/scripts/$DEBIAN_BRANCH <<'EOF'
 mirror_style release
 download_style apt
 finddebs_style from-indices
