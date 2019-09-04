@@ -44,7 +44,7 @@ done
 : ${ARCH:=}
 : ${ALPINE_ARCH:=}
 : ${ALPINE_CHROOT:="alpine_chroot"}
-: ${QEMU_VER:="v3.1.0-3"}
+: ${QEMU_VER:="v4.1.0-1"}
 : ${TEMP_DIR:="tmp"}
 
 
