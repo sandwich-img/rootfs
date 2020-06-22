@@ -84,7 +84,7 @@ fi
 mkdir -p "$ALPINE_CHROOT"/$ALPINE_ARCH/usr/bin "$ALPINE_CHROOT"/$ALPINE_ARCH/mnt/rootfs/usr/bin
 	
 case $ARCH in
-	arm* | aarch64) if [ ! -f x86_64_qemu-${QEMU_ARCH}-static.tar.gz ]; then
+	arm* | aarch64 | mips*) if [ ! -f x86_64_qemu-${QEMU_ARCH}-static.tar.gz ]; then
 		wget "$QEMU_URI"
 	fi
 	
