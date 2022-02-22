@@ -3,11 +3,9 @@ services: docker
 language: bash
 env:
     matrix:
-        - DISTRO=alpine   BRANCH=v3.12    ARCH=x86
-        - DISTRO=alpine   BRANCH=v3.12    ARCH=x86_64
-        - DISTRO=alpine   BRANCH=v3.12    ARCH=armhf
-        - DISTRO=alpine   BRANCH=v3.12    ARCH=aarch64
-        - DISTRO=alpine   BRANCH=v3.12    ARCH=mips64
+        - DISTRO=debian   BRANCH=bullseye    ARCH=amd64
+        - DISTRO=debian   BRANCH=bullseye    ARCH=armhf
+        - DISTRO=debian   BRANCH=bullseye    ARCH=arm64
 
 before_script:
     - sudo apt-get -y install qemu-user-static binutils
